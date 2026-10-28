@@ -1,0 +1,39 @@
+{
+  "name": "nebula-english-exam",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev --host 127.0.0.1",
+    "build": "vp build",
+    "preview": "vp preview --host 127.0.0.1",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+    "check:toolchain": "vp check",
+    "start": "node --env-file=.env build",
+    "seed:admin": "node --env-file=.env scripts/create-admin.mjs",
+    "bank:rebuild": "python3 scripts/build-bank.py",
+    "test:logic": "node --test scripts/logic.test.mjs"
+  },
+  "dependencies": {
+    "@sveltejs/adapter-node": "^5.3.0",
+    "@sveltejs/kit": "^2.43.0",
+    "svelte": "^5.39.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^6.2.0",
+    "svelte-check": "^4.3.0",
+    "typescript": "^5.9.0",
+    "vite-plus": "1.4.0",
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.4.0"
+  },
+  "engines": {
+    "node": "^22.18.0 || ^24.11.0 || >=26.0.0"
+  },
+  "description": "NEBULA English Proficiency Assessment — secure SvelteKit exam platform with Vite+.",
+  "author": "Aung Myat Thu",
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.4.0",
+    "vitest": "5.0.5"
+  },
+  "packageManager": "npm@10.9.2"
+}

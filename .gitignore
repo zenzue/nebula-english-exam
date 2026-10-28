@@ -1,0 +1,28 @@
+node_modules/
+.svelte-kit/
+build/
+.env
+.env.*
+!.env.example
+data/
+.DS_Store
+*.log
+private/*.csv
+private/*.json
+
+# Private examination material
+/private/
+/data/
+/scripts/build-bank.py
+*answer-key*.csv
+*QA.csv
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Generated dependencies and builds
+/node_modules/
+/.svelte-kit/
+/build/
